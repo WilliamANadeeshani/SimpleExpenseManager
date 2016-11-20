@@ -20,13 +20,13 @@ public class PersistentExpenseManager extends ExpenseManager{
 
         private Context context;
 
-        public PersistentExpenseManager(Context context) throws ExpenseManagerException {
+        public PersistentExpenseManager(Context context){
             this.context = context;
             this.setup();
         }
 
         @Override
-        public void setup() throws ExpenseManagerException {
+        public void setup(){
 
             //open the existingDataBase
             SQLiteDatabase myDb = context.openOrCreateDatabase(DATABASE_NAME, context.MODE_PRIVATE, null);
